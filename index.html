@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secret Code Escape Room</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="room" id="welcome">
+
+        <h1>🔐 CYBER ESCAPE ROOM</h1>
+
+        <h2>Cyber Mystery Edition</h2>
+
+        <p>
+            You are trapped inside Cyber Lab 404.
+            Solve five secret puzzles to escape.
+        </p>
+
+        <p>⏳ Mission Time: 20 Minutes</p>
+
+        <button onclick="startGame()">
+            START MISSION
+        </button>
+
+    </div>
+
+
+    <div class="room hidden" id="game">
+
+        <p id="timer">20:00</p>
+
+        <p id="progress">LEVEL 1 / 5</p>
+
+        <h2 id="title"></h2>
+
+        <p id="description"></p>
+
+        <div class="code" id="puzzle"></div>
+
+        <input
+            type="text"
+            id="answer"
+            placeholder="Enter your secret answer"
+        >
+
+        <button onclick="checkAnswer()">
+            UNLOCK DOOR
+        </button>
+
+        <p id="feedback"></p>
+
+    </div>
+
+
+    <div class="room hidden" id="success">
+
+        <h1>🎉 YOU ESCAPED!</h1>
+
+        <h2>Congratulations, Cyber Detective!</h2>
+
+        <p>You unlocked all five doors.</p>
+
+        <div class="code">
+            FLAG{CYBER_ESCAPE_MASTER}
+        </div>
+
+        <button onclick="location.reload()">
+            PLAY AGAIN
+        </button>
+
+    </div>
+
+
+    <div class="room hidden" id="failed">
+
+        <h1>⏰ TIME OVER!</h1>
+
+        <p>You could not escape Cyber Lab 404.</p>
+
+        <button onclick="location.reload()">
+            TRY AGAIN
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
